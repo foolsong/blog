@@ -1,4 +1,4 @@
-#<center>git commit --amend error</center>
+#<center> There was a problem with the editor 'vi'</center>
 <font  size=3 face="黑体">
 在项目中通过`git commit -m'modify message'`提交代码，发现提交的`modify message`不太准确，想要修改。使用`git commit --amend`命令修改`modify message`，在`vim`中编辑完`message`之后，`w+q`退出的时候报错且`message`保存失败，
 
@@ -23,4 +23,7 @@ Please supply the message using either -m or -F option.`
 </center>
 
 在次执行`git commit --amend`就OK了。
+
+参考：
+<a href="http://tooky.co.uk/there-was-a-problem-with-the-editor-vi-git-on-mac-os-x/" >http://tooky.co.uk/there-was-a-problem-with-the-editor-vi-git-on-mac-os-x/</a>
 </font>
