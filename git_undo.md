@@ -90,7 +90,27 @@
 | soft |--soft参数告诉Git重置HEAD到另外一个commit，但也到此为止。如果你指定--soft参数，Git将停止在那里而什么也不会根本变化。这意味着index,working copy都不会做任何变化，所有的在original HEAD和你重置到的那个commit之间的所有变更集仍然在stage(index)区域中。|
 | hard |--hard参数将会blow out everything.它将重置HEAD返回到另外一个commit(取决于~12的参数），重置index以便反映HEAD的变化，并且重置working copy也使得其完全匹配起来。这是一个比较危险的动作，具有破坏性，数据因此可能会丢失！如果真是发生了数据丢失又希望找回来，那么只有使用：git reflog命令了|
 |mixed(default）|--mixed是reset的默认参数，也就是当你不指定任何参数时的参数。它将重置HEAD到另外一个commit,并且重置index以便和HEAD比配，但是也到此为止。working copy不会被更改。所以所有从original HEAD到你重置到的那个commit之间的所有变更仍然保存在working copy中，被标示为已变更，但是并未staged的状态|
-`git reset --mixed [版本号]`
+举个简单的例子： `git reset --mixed [版本号]`
+
+<center>
+	 <img src="http://osz3uubsl.bkt.clouddn.com/blog_7_14_git_undo_06.png" width = "500" alt="图片名称" align=center />
+</center>
+1.先`git commit`提交一部分内容，在通过`git reset --mixed 62aba96`，撤销最后一次的提交。
+
+<center>
+	 <img src="http://osz3uubsl.bkt.clouddn.com/blog_7_14_git_undo_07.png" width = "500" alt="图片名称" align=center />
+</center>
+2.在通过`git diff`查看修改过的内容。会发现`[62aba96]`提交的内容，回到了工作区
+<center>
+	 <img src="http://osz3uubsl.bkt.clouddn.com/blog_7_14_git_undo_08.png" width = "500" alt="图片名称" align=center />
+</center>
+3.这个时候通过`git reflog`查看最上面两条信息，一条是`git commit`的信息，一条是`git reset`的信息。
+
+##git revert
+如果简单的说一下`git revert`的作用，通过创建一条新的`commit`，覆盖之前的某一次`commit`所提交的内容，但是不会影响之前的提交信息。
+>Given one or more existing commits, revert the changes that the related patches introduce, and record some new commits that record them. This requires your working tree to be clean (no modifications from the HEAD commit).
+
 ##参考
 [http://www.cnblogs.com/craftor/archive/2012/11/04/2754147.html](http://www.cnblogs.com/craftor/archive/2012/11/04/2754147.html)
+
 [http://www.cnblogs.com/kidsitcn/p/4513297.html](http://www.cnblogs.com/kidsitcn/p/4513297.html)
