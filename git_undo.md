@@ -41,7 +41,11 @@
 	 create mode 100644 runtime.md</br>
 </div></div>
 
- `git commit -- amend` 默认的编辑器不是`vim`可能会遇到一个bug：<font color="red">There was a problem with the editor ‘vi’   [bug修复传送门～点击](http://blog.csdn.net/foolsong/article/details/75042751)<font>
+ `git commit -- amend` 默认的编辑器不是`vim`可能会遇到一个bug：<font color="red">There was a problem with the editor ‘vi’   [bug修复传送门～点击](http://blog.csdn.net/foolsong/article/details/75042751)</font>
 
 ###git checkout
+`git checkout`一些常用的用法：
+
+*   git checkout [-q] [<commit>] [--] <paths>... 
+
 http://www.cnblogs.com/craftor/archive/2012/11/04/2754147.html
