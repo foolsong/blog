@@ -110,7 +110,28 @@
 如果简单的说一下`git revert`的作用，通过创建一条新的`commit`，覆盖之前的某一次`commit`所提交的内容，但是不会影响之前的提交信息。
 >Given one or more existing commits, revert the changes that the related patches introduce, and record some new commits that record them. This requires your working tree to be clean (no modifications from the HEAD commit).
 
+|参数|作用|
+| :---------------: |:-------------|
+|git revert HEAD| 撤销上一次的`commit`|
+|git revert HEAD^|撤销上上一次的`commit`|
+|git revert [commit-id]|撤销到指定的某一次的`commit`|
 
+举个简单的例子：
+<center>
+	 <img src="http://osz3uubsl.bkt.clouddn.com/blog_7_14_git_undo_09.png" width = "500" alt="图片名称" align=center />
+</center>
+
+1. 先`commit`提交一条内容。
+2. 在通过`git revert HEAD`
+3. 在通过`git reflog`（下图）和`git log -p`（下图）查看会发现，有条`commmit`覆盖了之前`commit`的操作。
+
+<center>
+	 <img src="http://osz3uubsl.bkt.clouddn.com/blog_7_14_git_undo_10.png" width = "500" alt="图片名称" align=center />
+</center>
+
+<center>
+	 <img src="http://osz3uubsl.bkt.clouddn.com/blog_7_14_git_undo_12.png" width = "500" alt="图片名称" align=center />
+</center>
 ##参考
 [http://www.cnblogs.com/craftor/archive/2012/11/04/2754147.html](http://www.cnblogs.com/craftor/archive/2012/11/04/2754147.html)
 
