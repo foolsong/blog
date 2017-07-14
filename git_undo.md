@@ -110,6 +110,7 @@
 如果简单的说一下`git revert`的作用，通过创建一条新的`commit`，覆盖之前的某一次`commit`所提交的内容，但是不会影响之前的提交信息。
 >Given one or more existing commits, revert the changes that the related patches introduce, and record some new commits that record them. This requires your working tree to be clean (no modifications from the HEAD commit).
 
+
 ##参考
 [http://www.cnblogs.com/craftor/archive/2012/11/04/2754147.html](http://www.cnblogs.com/craftor/archive/2012/11/04/2754147.html)
 
