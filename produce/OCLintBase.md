@@ -1,4 +1,6 @@
 #<center>OCLint-iOS-OC项目几种简单使用</center>
+
+<font color=red size=15> 未完待续</font>
 ####OCLint简介
 >OCLint is a static code analysis tool for improving quality and reducing defects by inspecting C, C++ and Objective-C code and looking for potential problems like possible bugs, unused code, complicated code, redundant code, code smells, bad practices, and so on.
 
@@ -9,7 +11,7 @@
 
 ###Using OCLint with xcodebuild
 `xcodebuild -target DemoProject -configuration Debug -scheme DemoProject`
-####Using OCLint with xctool
+###Using OCLint with xctool
 安装
 > $ brew install xctool --HEAD
 
